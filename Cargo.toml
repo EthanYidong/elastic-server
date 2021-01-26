@@ -1,0 +1,28 @@
+[package]
+name = "elastic-backend"
+version = "0.1.0"
+authors = ["EthanYidong <ethanyidong@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+warp = "0.3"
+reqwest = { version = "0.11", features = ["json"] }
+
+# TODO: upgrade after pr is merged
+mongodb = { git = "https://github.com/saghm/mongo-rust-driver", branch = "tokio10-alpha" }
+bson = "1.1"
+
+jsonwebtoken = "7.2"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+thiserror = "1.0"
+
+dotenv = "0.15"
+
+log = "0.4"
+pretty_env_logger = "0.4"
